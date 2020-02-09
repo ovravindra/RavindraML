@@ -6,32 +6,28 @@ def selectsort(A):
     n = len(A)
     for i in range (1,n):
         a = A[i]
-        for j in range (i,n):
-            [b,x] = mini(A[(j+1):n])
+        for j in range ((i+1),(n)):
+            [b,x] = mini(A[j:n])
             if a > b:
-                mat2 = swap(i,j,A[])
+                mat2 = swap(i,j,A)
     print(mat2)
 
 
 
-
-
-def position(a,A[]):  # return the position of an element in an array
+def position(a,A):  # extra function not used in the code: return the position of an element in an array
     n = len(A)
     if a in A:
         for i in range (1,n):
             if a == A[i]:
                 # x.append(i) is used in case of repetitions of elements in the matrix
                 x = i
-    
-    return x
-
-    else:
-        print("the element is not present in the vector")
+                break
+        return x
+    # else print("the element is not present in the vector")
 
 
 
-def mini(A[]):  # return the minimum element of an array(y) and its position(x)
+def mini(A):  # return the minimum element of an array(y) and its position(x)
     n = len(A)
 
     y = A[1]
@@ -46,7 +42,8 @@ def mini(A[]):  # return the minimum element of an array(y) and its position(x)
     return [x, i]
 
 
-def swap(i,j,A[]):  # swap positions between two elements of an array and return the matrix
+
+def swap(i,j,A):  # swap positions between two elements of an array and return the matrix
     emp = A[i]
     A[i] = A[j]
     A[j] = emp
