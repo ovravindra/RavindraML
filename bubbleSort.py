@@ -1,3 +1,8 @@
+"""
+comparing two adjcent elements in the matrix and swapping them.
+iterating throught the set with each iteration few elements sorted.
+"""
+
 def bubbleSort(A):
     n = len(A)
     for j in range (1,n):
